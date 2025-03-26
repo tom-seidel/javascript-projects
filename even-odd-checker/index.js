@@ -1,27 +1,26 @@
 // 1. Get the elements
-var inputField = document.getElementById("numberInput");
+var input = document.getElementById("numberInput");
 var button = document.getElementById("checkButton");
-var outputDiv = document.getElementById("output");
+var output = document.getElementById("output");
 
 // 2. Event Listener for button click
 
 button.addEventListener("click", function() {
 
-    var input = parseInt(inputField.value); // number from input field
+    var number = parseInt(input.value); // number from number field
 
-    if (isNaN(input)) {
-        outputDiv.textContent = "That's not a valid number!";
+    if (isNaN(number)) {
+        output.textContent = "That's not a valid number!";
+        output.style.color = "red";
         return;
     }
-
-    if (input % 3 == 0) {
-        outputDiv.textContent = "Fizz";
-    }
-    else if (input % 2 == 0) {
-        outputDiv.textContent = "The number is even!";
+    else if (number % 2 == 0) {
+        output.textContent = "The number is even!";
+        output.style.color = "green";
     }
     else {
-        outputDiv.textContent = "The number is odd!";
+        output.textContent = "The number is odd!";
+        output.style.color = "blue";
     }
 
 });
