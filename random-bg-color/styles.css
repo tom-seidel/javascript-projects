@@ -12,6 +12,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -29,8 +30,16 @@ main {
 
 .button:hover {
     background: #27ae60;
-    width: 124px;
-    height: 124px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     color: #fff;
+}
+
+.output {
+    margin-top: 40px;
+    padding: 12px;
+    font-size: 18px;
+    background: #ddd;
+    border-radius: 12px;
 }
