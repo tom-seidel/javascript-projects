@@ -8,16 +8,16 @@ button.addEventListener("click", () => {
     const two = parseFloat(numberTwo.value); // number from number field two
     
     if(isNaN(one) || isNaN(two)) {
-        output.textContent = "Ergebnis: Bitte gütlige Zahlen eingeben!";
+        output.textContent = "Result: Please enter valid numbers!";
         output.style.color = "red";
         return;
     }
 
     if(two === 0) {
-        output.textContent = "Ergebnis: Division durch 0 ist nicht erlaubt!";
+        output.textContent = "Result: Divisio by 0 is not allowed!";
         output.style.color = "red";        
         return;
     }
 
-    output.textContent = `Ergebnis: ${one / two}`;
+    output.textContent = `Result: ${one / two}`;
 });
