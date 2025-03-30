@@ -1,0 +1,95 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Poppins", sans-serif; background: #78b4c6; color: white;}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+    padding: 12px;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 12px;
+    border-style: none;
+    font-size: 12px;
+    font-weight: 700;
+    background: #ddd;
+    color: #222;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article {
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1a1a1a !important;  /* Dark background */
+    color: #f1f1f1 !important;       /* Light text */
+}
+
+.dark-mode header {
+    background: #1a1a1a;  /* Darker header */
+}
+
+.dark-mode .wrapper {
+    background: #1a1a1a;
+}
+
+.dark-mode .article {
+    background: #1a1a1a;
+    color: #f1f1f1;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.dark-mode .button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .button:hover {
+    background: #c9783a;
+}
+
+/* Dark Mode if dark mode is enabled in system settings */
+/*
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-mode) {
+        background: #1a1a1a;
+        color: #f1f1f1;
+    }
+
+    .button {
+        background: #444;
+        color: #fff;
+    }
+    .button:hover {
+        background: #c9783a;
+    }
+
+}
+*/
