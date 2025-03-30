@@ -4,24 +4,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
     // Check if user has dark mode as system setting
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    //const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkMode = localStorage.getItem("darkMode") === "enabled" || 
+                      (!localStorage.getItem("darkMode") && prefersDarkMode);
 
-    // Check Local Storage or fallback for System-Setting
-    if (localStorage.getItem("darkMode") === "enabled" || (!localStorage.getItem("darkMode") && prefersDarkMode)) {
+    // Set initial mode
+    if (isDarkMode) {
         body.classList.add("dark-mode");
     }
 
-    // Toggle Dark Mode on button click
-    button.addEventListener("click", () => {
-        console.log("Button clicked!");
-        body.classList.toggle("dark-mode");
+    // Update button text
+    const updateButton = () => {
+        button.textContent = body.classList.contains("dark-mode") 
+            ? "☀️ Light Mode" 
+            : "🌙 Dark Mode";
+    };
 
-        // Save to local storage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
+    // Set initials button text
+    updateButton();
+
+    // Toggle function
+    button.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        updateButton(); // Button-Text nach jedem Klick aktualisieren
     });
 
 });
