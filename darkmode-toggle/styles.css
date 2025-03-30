@@ -47,12 +47,12 @@ main {
 
 /* Dark Mode */
 .dark-mode {
-    background: #1a1a1a !important;  /* Dark background */
-    color: #f1f1f1 !important;       /* Light text */
+    background: #1a1a1a;  /* Dark background */
+    color: #f1f1f1;       /* Light text */
 }
 
 .dark-mode header {
-    background: #1a1a1a;  /* Darker header */
+    background: #1a1a1a;
 }
 
 .dark-mode .wrapper {
@@ -62,8 +62,6 @@ main {
 .dark-mode .article {
     background: #1a1a1a;
     color: #f1f1f1;
-    border-radius: 8px;
-    padding: 16px;
 }
 
 .dark-mode .button {
@@ -74,22 +72,3 @@ main {
 .dark-mode .button:hover {
     background: #c9783a;
 }
-
-/* Dark Mode if dark mode is enabled in system settings */
-/*
-@media (prefers-color-scheme: dark) {
-    body:not(.dark-mode) {
-        background: #1a1a1a;
-        color: #f1f1f1;
-    }
-
-    .button {
-        background: #444;
-        color: #fff;
-    }
-    .button:hover {
-        background: #c9783a;
-    }
-
-}
-*/
