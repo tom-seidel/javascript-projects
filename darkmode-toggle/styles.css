@@ -1,5 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Poppins", sans-serif; background: #78b4c6; color: white;}
+body { font-family: "Poppins", sans-serif; background: #78b4c6; color: #222;}
 
 header {
     display: flex;
